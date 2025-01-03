@@ -21,8 +21,6 @@ export class AboutPageComponent {
                     bio: response.bio,
                     education: response.education
                 };
-
-                console.log(response);
             });
     }
 
