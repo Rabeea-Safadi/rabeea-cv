@@ -1,5 +1,5 @@
 <div class="hstack gap-4 justify-content-center align-items-center py-3 mb-5">
     <button *ngFor="let e of navItems" [routerLink]="e.path" class="btn px-3 py-2"
-        [ngClass]="{ 'btn-outline-primary': ActiveRoute != e.path, 'btn-primary': ActiveRoute == e.path }"> {{
+        [ngClass]="{ 'btn-outline-success': ActiveRoute != e.path, 'btn-success': ActiveRoute == e.path }"> {{
         e.label }} </button>
 </div>
