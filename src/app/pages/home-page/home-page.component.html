@@ -1,5 +1,33 @@
 <div class="container">
-    <h1 class="text-center fw-bold fs-2">
-        Rabeea Safadi
-    </h1>
+    <div *ngIf="!PageContent" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <ng-container *ngIf="PageContent">
+        <h1 class="text-center fw-bold fs-2 mb-4">
+            {{ PageContent.name }}
+        </h1>
+
+        <div class="d-flex justify-content-center mb-4">
+            <img src="/rabeea.jpg" alt="{{ PageContent.name }}"
+                class="img img-fluid rounded-3 shadow object-fit-cover home-profile-image">
+        </div>
+
+        <p class="lead text-center mb-3">
+            {{ PageContent.title }}
+        </p>
+
+        <p class="lead text-center mb-5">
+            {{ PageContent.subtitle }}
+        </p>
+
+        <div class="hstack justify-content-center align-items-center gap-4">
+            <a class="text-success fs-6 fw-semibold" href="{{ PageContent.linkedin }}" target="_blank">Go to my LinkedIn
+                page</a>
+            <a class="text-success fs-6 fw-semibold" href="mailto: {{ PageContent.email }}" target="_blank">Send me an
+                email!</a>
+        </div>
+    </ng-container>
 </div>
