@@ -27,11 +27,11 @@ export const routes: Routes = [
         title: "Rabeea Safadi | Experience",
         component: ExperienceComponent
     },
-    {
-        path: "portfolio",
-        title: "Rabeea Safadi | Portfolio",
-        component: PortfolioComponent
-    },
+    // {
+    //     path: "portfolio",
+    //     title: "Rabeea Safadi | Portfolio",
+    //     component: PortfolioComponent
+    // },
     {
         path: "contact",
         title: "Rabeea Safadi | Contact",

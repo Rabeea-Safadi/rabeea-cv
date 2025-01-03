@@ -29,10 +29,10 @@ export class NavbarComponent {
                 label: "Experience",
                 path: "/experience"
             },
-            {
-                label: "Portfolio",
-                path: "/portfolio"
-            },
+            // {
+            //     label: "Portfolio",
+            //     path: "/portfolio"
+            // },
             {
                 label: "Contact",
                 path: "/contact"
