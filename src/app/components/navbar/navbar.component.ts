@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, TemplateRef } from "@angular/core";
 import { SharedModule } from "../../shared/shared.module";
 import { Router } from "@angular/router";
+import { NgbOffcanvas } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: "app-navbar",
@@ -11,7 +12,7 @@ import { Router } from "@angular/router";
 export class NavbarComponent {
     navItems: NavItem[];
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private offcanvasService: NgbOffcanvas) {
         this.navItems = [
             {
                 label: "Home",
@@ -38,6 +39,14 @@ export class NavbarComponent {
                 path: "/contact"
             }
         ];
+    }
+
+    openMobileNav(offCanvas: TemplateRef<any>) {
+        this.offcanvasService.open(offCanvas);
+    }
+
+    closeMobileNav(offCanvas: TemplateRef<any>) {
+        this.offcanvasService.dismiss(offCanvas);
     }
 
     get ActiveRoute() {
