@@ -1,1 +1,89 @@
-<p>skills works!</p>
+<div class="container">
+    <div *ngIf="!PageContent" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <ng-container *ngIf="PageContent">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1 class="card-title fw-bold fs-2">
+                    Front-End Development
+                </h1>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let e of PageContent.front">
+                        {{ e }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1 class="card-title fw-bold fs-2">
+                    Back-End Development
+                </h1>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let e of PageContent.back">
+                        {{ e }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1 class="card-title fw-bold fs-2">
+                    Content Management
+                </h1>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let e of PageContent.cms">
+                        {{ e }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1 class="card-title fw-bold fs-2">
+                    Database Management
+                </h1>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let e of PageContent.db">
+                        {{ e }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1 class="card-title fw-bold fs-2">
+                    Web Services
+                </h1>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let e of PageContent.services">
+                        {{ e }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ng-container>
+</div>
